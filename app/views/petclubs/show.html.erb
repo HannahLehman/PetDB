@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @petclub.name %>
+</p>
+
+<p>Owners of Pets in this Club:</p>
+	<ul>
+		<% @petclub.owners.each do |owner| %>
+		<li><%= owner.name %></li>
+		<% end %>
+	</ul>
+
+<%= link_to 'Edit', edit_petclub_path(@petclub) %> |
+<%= link_to 'Back', petclubs_path %>
